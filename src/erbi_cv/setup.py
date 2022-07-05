@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'erbi_nlp'
+package_name = 'erbi_cv'
 
 setup(
     name=package_name,
@@ -20,8 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "nlp_alive_pub = erbi_nlp.alive_publisher:main",
-            "nlp_alive_sub = erbi_nlp.alive_subscriber:main",
+            "cv_alive_pub = erbi_cv.alive_publisher:main",
+            "cv_alive_sub = erbi_cv.alive_subscriber:main",
         ],
     },
 )

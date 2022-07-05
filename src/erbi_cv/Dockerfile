@@ -1,7 +1,6 @@
 FROM osrf/ros:humble-desktop
 
-
-RUN mkdir -p ~/dev/src/erbi_nlp
+RUN mkdir -p ~/dev/src/erbi_cv
 
 COPY . /root/dev/src
 

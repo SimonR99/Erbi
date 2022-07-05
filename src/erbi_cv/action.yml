@@ -1,0 +1,5 @@
+name: 'erbi-cv'
+description: 'Run the cv program'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

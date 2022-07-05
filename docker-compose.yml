@@ -1,15 +1,13 @@
 version: '2'
 
 services:
-  erbi_cv:
-    image: erbi_cv:latest
-    build: ./src/erbi_cv
-    #command: ros2 run demo_nodes_cpp talker
-  talker:
-    image: osrf/ros:humble-desktop
-    command: ros2 run demo_nodes_cpp talker
-  listener:
-    image: osrf/ros:humble-desktop
-    command: ros2 run demo_nodes_cpp listener
+  erbi_nlp:
+    image: erbi_nlp
+    build: ./src/erbi_nlp
+    command: ros2 run erbi_nlp nlp_alive_pub
+  erbi_nlp2:
+    image: erbi_nlp
+    build: ./src/erbi_nlp
+    command: ros2 run erbi_nlp nlp_alive_sub
     depends_on:
-      - talker
+      - erbi_nlp
