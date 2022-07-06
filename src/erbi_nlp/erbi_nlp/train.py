@@ -1,8 +1,8 @@
 import argparse
 import tensorflow as tf
 
-from transformer.model import transformer
-from transformer.dataset import get_dataset, preprocess_sentence
+from transformers.model import transformer
+from transformers.dataset import get_dataset, preprocess_sentence
 
 
 class CustomSchedule(tf.keras.optimizers.schedules.LearningRateSchedule):

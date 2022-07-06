@@ -1,18 +1,18 @@
-from example_interfaces.srv import AddTwoInts
-
 import rclpy
 from rclpy.node import Node
+from erbi_interfaces.srv import Conversation
+from chatbot.chatbot import Chatbot
 
-
-class MinimalService(Node):
+class ChatBot(Node):
 
     def __init__(self):
-        super().__init__('minimal_service')
-        self.srv = self.create_service(AddTwoInts, 'add_two_ints', self.add_two_ints_callback)
+        super().__init__('ChatBot')
+        self.get_logger().info('ChatBot node started')
+        self.srv = self.create_service(Conversation, 'conversation', self.conversation_callback)
+        self.agent = Chatbot()
 
-    def add_two_ints_callback(self, request, response):
-        response.sum = request.a + request.b
-        self.get_logger().info('Incoming request\na: %d b: %d' % (request.a, request.b))
+    def conversation_callback(self, request, response):
+        response.result = self.agent.response(request.question)
 
         return response
 
@@ -20,7 +20,7 @@ class MinimalService(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    minimal_service = MinimalService()
+    minimal_service = ChatBot()
 
     rclpy.spin(minimal_service)
 

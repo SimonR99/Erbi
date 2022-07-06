@@ -23,12 +23,18 @@ set(msg_files
   "msg/Conversation.msg"
   )
 
-set(action_files
+set(msg_files
+  "msg/Conversation.msg"
+  )
+
+set(srv_files
+"srv/Conversation.srv"
   )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
   ${action_files}
+  ${srv_files}
   )
 
 ament_export_dependencies(rosidl_default_runtime)

@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             "nlp_alive_pub = erbi_nlp.alive_publisher:main",
             "nlp_alive_sub = erbi_nlp.alive_subscriber:main",
+            "nlp_chatbot = erbi_nlp.chatbot_service:main",
         ],
     },
 )

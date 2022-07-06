@@ -10,6 +10,12 @@ RUN echo 'exec "$@"' >> /ros_entrypoint.sh
 
 RUN mkdir -p ~/dev/src/erbi_interfaces
 
+RUN apt-get update && apt-get install -y --no-install-recommends
+RUN apt-get install python3-pip -y
+RUN pip3 install tensorflow
+RUN pip3 install tensorflow-addons
+RUN pip3 install tensorflow-datasets
+
 COPY . /root/dev/src/erbi_interfaces
 
 WORKDIR /root/dev
