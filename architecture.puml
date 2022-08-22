@@ -1,0 +1,36 @@
+@startuml
+skinparam BackgroundColor transparent
+skinparam componentStyle rectangle
+component Core {
+    component Erbi_cv {
+
+    }
+    component Erbi_nlp {
+
+    }
+    component nav2 {
+
+    }
+
+    component description {
+
+    }
+}
+component Remote {
+    component Erbi_teleop {
+
+    }
+    component Erbi_diagnostics {
+
+    }
+}
+component Perception {
+    component openvlsam_ros {
+
+    }
+    component Erbi_diagnostics {
+
+    }
+}
+openvlsam_ros-->nav2
+@enduml
