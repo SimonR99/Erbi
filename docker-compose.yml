@@ -5,7 +5,7 @@ services:
   erbi_base:
     image: erbi_base
     build: ./src/erbi_base
-
+  
   erbi_nlp:
     image: erbi_nlp
     build: ./src/erbi_nlp
