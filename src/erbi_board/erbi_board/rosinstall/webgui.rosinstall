@@ -1,0 +1,3 @@
+- git:
+    local-name: rosboard
+    uri: https://github.com/dheera/rosboard.git
