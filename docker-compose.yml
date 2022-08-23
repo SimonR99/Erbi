@@ -1,13 +1,24 @@
 version: '2'
 
 services:
+
+  erbi_base:
+    image: erbi_base
+    build: ./src/erbi_base
+
   erbi_nlp:
     image: erbi_nlp
     build: ./src/erbi_nlp
     command: ros2 run erbi_nlp nlp_alive_pub
-  erbi_nlp2:
-    image: erbi_nlp
-    build: ./src/erbi_nlp
-    command: ros2 run erbi_nlp nlp_alive_sub
     depends_on:
+      - erbi_base
+
+  erbi_board:
+    image: erbi_board
+    build: ./src/erbi_board
+    command: ros2 run rosboard rosboard_node
+    ports:
+      - "8888:8888"
+    depends_on:
+      - erbi_base
       - erbi_nlp

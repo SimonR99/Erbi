@@ -1,4 +1,4 @@
-FROM test
+FROM erbi_base
 
 RUN mkdir -p ~/dev/src/erbi_nlp
 

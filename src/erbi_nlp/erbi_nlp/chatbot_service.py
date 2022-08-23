@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from erbi_interfaces.srv import Conversation
+from erbi_base.srv import Conversation
 from chatbot.chatbot import Chatbot
 
 class ChatBot(Node):

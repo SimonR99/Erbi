@@ -24,7 +24,7 @@
 # EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # https://hub.docker.com/_/ros
-FROM osrf/ros:humble-desktop
+FROM erbi_base
 
 
 # https://github.com/dheera/rosboard

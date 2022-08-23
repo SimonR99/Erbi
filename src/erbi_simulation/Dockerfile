@@ -1,4 +1,4 @@
-FROM osrf/ros:humble-desktop
+FROM erbi_base
 
 
 RUN mkdir -p ~/dev/src/erbi_cv
