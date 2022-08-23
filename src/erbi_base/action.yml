@@ -1,0 +1,5 @@
+name: 'erbi-base'
+description: 'Base template for docker'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
